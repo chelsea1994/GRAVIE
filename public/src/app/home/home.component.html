@@ -1,0 +1,19 @@
+<div class="container">
+
+    <div class="box" *ngFor="let game of gamesList">
+        <div class="columns">
+            <div class="column is-one-third">
+                <img style="height:400px;width:300px" [src]="game.image.screen_large_url" alt="Image Alt">
+            </div>
+            <div class="column">
+                <h2 class="title is-2">{{game.name}}</h2>
+                <p class="has-text-weight-bold">{{game.deck}}</p>
+                <p>GUID: {{game.guid}}</p>
+                <button [routerLink]="['/checkout/' + game.guid]" class="button is-success">Rent for $599.99</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
